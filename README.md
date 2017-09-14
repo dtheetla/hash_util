@@ -28,7 +28,7 @@ Or install it yourself as:
 ```ruby
 hash1 = {a:1,b:2,c:[1,2],d:{a:1}}
 hash2 = {a:3,b:3,c:[3,2],d:{a:10}}
-hash3 = HashUtil.add_hash2_to_hash1(hash1,hash2) # {a:4,b:5,c:[4,4],d:{a:11}}
+hash3 =  HashUtil.add_hash2_to_hash1(hash1,hash2) # hash1 = hash3 = {a:4,b:5,c:[4,4],d:{a:11}}
 ```
 (2) zero
 ```ruby
