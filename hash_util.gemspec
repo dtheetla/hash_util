@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dinesh"]
 
   spec.summary       = %q{Ruby Hash utility methods.}
-  spec.description   = %q{Hash utility methods to add 2 hashes / set all hash values to zero}
+  spec.description   = %q{Hash utility methods for Ruby Hashes, refer documentation}
   spec.homepage      = "https://github.com/dtheetla/hash_util"
   spec.license       = "MIT"
 
