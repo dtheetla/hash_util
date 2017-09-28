@@ -1,10 +1,18 @@
 # HashUtil
 
 Hash utility methods.
+
 1)add_hash2_to_hash1 => This adds hash2 values with hash1. Both Hash1 and Hash2
 should be of same structure
 
 2)zero => This sets all values of a hash to 0
+
+3)merge => Overrides hash1 values with hash2 values
+
+4)tokenize => tokenizes a hash and returns a flat array
+
+5) extract_numbers_hash => extracts numbers from a hash             
+
 
 ## Installation
 
@@ -24,7 +32,7 @@ Or install it yourself as:
 
 ## Usage
 
-(1)add_hash2_to_hash1)
+(1)add_hash2_to_hash1
 ```ruby
 hash1 = {a:1,b:2,c:[1,2],d:{a:1}}
 hash2 = {a:3,b:3,c:[3,2],d:{a:10}}
@@ -36,7 +44,6 @@ hash1 = {a:1,b:2,c:[1,2],d:{a:1}}
 HashUtil.zero(hash1) #{a:0,b:0,c:[0,0],d:{a:0}}
 ```
 (3) merge
-0verrides hash1 values with hash2 values. 
 ```ruby
    str1 = %{
         { "OccExp": [ -0.0004, 0.09600, 0.0000, -0.0204, 0.09 ,"abc":{"a":1,"b":0,"c":[0,1,2]} ], 
@@ -51,7 +58,6 @@ HashUtil.zero(hash1) #{a:0,b:0,c:[0,0],d:{a:0}}
     str1 =  HashUtil.merge(str1,str2) # values in str1 == str2
 ```
 (4) tokenize
-tokenizes a hash and returns a flat array
 ```ruby
  str2 = %{
           { "OccExp": [ 0.0250000004, 0.0199999996, "abc":{"a":1,"b":0,"c":[0,1,2]}]}
@@ -59,7 +65,6 @@ tokenizes a hash and returns a flat array
  HashUtil.extract_numbers_hash(str2) #[ 0.0250000004, 0.0199999996,1,0,0,1,2]
 ```
 (5) extract_numbers_hash 
-extracts numbers from a hash             
 ```ruby
     str2 = %{
         { "OccExp": [ 0.0250000004, 0.0199999996, "abc":{"a":1,"b":0,"c":[0,1,2]}]}
