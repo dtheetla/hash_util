@@ -2,14 +2,14 @@
 
 Hash utility methods.
 
-1)add_hash2_to_hash1 => This adds hash2 values with hash1. Both Hash1 and Hash2
+1) add_hash2_to_hash1 => This adds hash2 values with hash1. Both Hash1 and Hash2
 should be of same structure
 
-2)zero => This sets all values of a hash to 0
+2) zero => This sets all values of a hash to 0
 
-3)merge => Overrides hash1 values with hash2 values
+3) merge => Overrides hash1 values with hash2 values
 
-4)tokenize => tokenizes a hash and returns a flat array
+4) tokenize => tokenizes a hash and returns a flat array
 
 5) extract_numbers_hash => extracts numbers from a hash             
 
