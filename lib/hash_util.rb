@@ -63,7 +63,7 @@ module HashUtil
   end
 
   def self.tokenize(str)
-    str.scan(/[0-9.-]+|\w+/)
+    str.scan(/[0-9.e-]+|\w+/)
   end
 
   # extracts all numbers in a hash string
