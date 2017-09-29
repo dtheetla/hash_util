@@ -50,7 +50,7 @@ module HashUtil
   # The 2 hashes should be of same structure but keys
   # can be different
   def self.merge(hash_str1, hash_str2)
-    token1 = hash_str1.scan(/[[+-]?([0-9]*[.])?[0-9]+]+|\w+|[{}\[\]:,"\040]/)
+    token1 = hash_str1.scan(/[[+-]?([0-9]*[.])?[0-9e-]+]+|\w+|[{}\[\]:,"\040]/)
     token2 = extract_numbers_hash(hash_str2)
     j = 0
     token1.each_index do |i|
