@@ -52,11 +52,14 @@ module HashUtil
   def self.merge(hash_str1, hash_str2)
     token1 = hash_str1.scan(/[[+-]?([0-9]*[.])?[0-9e-]+]+|\w+|[{}\[\]:,"\040]/)
     token2 = extract_numbers_hash(hash_str2)
+    # byebug
     j = 0
     token1.each_index do |i|
-      if /[0-9.]/.match token1[i]
+      begin
+        Float token1[i]
         token1[i] = token2[j]
         j += 1
+      rescue
       end
     end
     token1.join.gsub(/\s+/, ' ')
@@ -69,9 +72,9 @@ module HashUtil
   # extracts all numbers in a hash string
   def self.extract_numbers_hash(str)
     str = tokenize str
-    str.select! { |m| /[0-9.]/.match m }
+    str.select! { |m| /^[0-9.e-]+$/.match m }
     str.collect do |m|
-      m.to_s.include?('.') ? m.to_f : m.to_i
+      Float m
     end
   end
 end
