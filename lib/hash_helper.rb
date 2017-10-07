@@ -9,16 +9,6 @@ module HashHelper
     str.scan(/[0-9.e-]+|\w+/)
   end
 
-  # extracts all numbers in a hash string
-  def extract_numbers_hash(str)
-    str = tokenize str
-    # extract all nums including those using e notation
-    str.select! { |m| /^[0-9.e-]+$/.match m }
-    # used Float instead of to_f as to_f converts to string '0'
-    str.collect do |m|
-      Float m
-    end
-  end
 
   # submethod used by add_hash2_to_hash1 if type Array
   def add_hash_if_array(a1, b1)
